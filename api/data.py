@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route("/get-data", methods=['GET'])
 def get():
     # data = pd.read_csv("/Users/juhyun/cs489/factect/data/정치_20231116_05시22분22초.csv", dtype={"date":str, "title":str, "link":str}) # (730, 4) shape의 data가 reading 된다.
-    reader = open("/Users/juhyun/cs489/factect/data/정치_20231116_05시22분22초.csv")
+    reader = open("/Users/juhyun/cs489/factdect/data/정치_20231116_05시22분22초.csv")
     start = True
     datas=[]
     for line in reader:
