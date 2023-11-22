@@ -2,9 +2,10 @@ import logo from './logo.svg';
 import React from "react";
 import './App.css';
 import ListView from './ListView';
+import Rank from './Rank'
 
 // function App() {
-//   return (
+//   return (-
 //     <div className="App">
 //       <header className="App-header">
 //         <img src={logo} className="App-logo" alt="logo" />
@@ -27,7 +28,7 @@ import ListView from './ListView';
 function App() {
   return (
     <div className="App">
-      <ListView />
+      <Rank/>
     </div>
   );
 }
