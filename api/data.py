@@ -31,13 +31,28 @@ def get():
         datas.append(data_json)
     return datas
 
-@app.route("/sign-up", methods=['POST'])
-def sign_up():
-    user = request.json
-    response = {
-        'name': user['name'],
-        'email': user['email'],
-        'password': user['password'],
-        'profile': user['profile']
-    }
-    return jsonify(response), 200
+@app.route("/percentage", methods=['GET'])
+def percentage():
+    reader = open("/Users/juhyun/cs489/factdect/data/result_per_category_percentage.csv")
+    start = True
+    datas = []
+    for line in reader:
+        if start:
+            start = not start
+            continue
+        each_data = line.split(",")[:5] # publisher name, fact number, fact percentage, conv percentage, fake percentage
+        data_dict = {"publisher": each_data[0], "fact":each_data[2], "conv": each_data[3], "fake": each_data[4]}
+        data_json = json.dumps(data_dict)
+        datas.append(data_json)
+    return datas
+
+# @app.route("/sign-up", methods=['POST'])
+# def sign_up():
+#     user = request.json
+#     response = {
+#         'name': user['name'],
+#         'email': user['email'],
+#         'password': user['password'],
+#         'profile': user['profile']
+#     }
+#     return jsonify(response), 200
