@@ -45,14 +45,3 @@ def percentage():
         data_json = json.dumps(data_dict)
         datas.append(data_json)
     return datas
-
-# @app.route("/sign-up", methods=['POST'])
-# def sign_up():
-#     user = request.json
-#     response = {
-#         'name': user['name'],
-#         'email': user['email'],
-#         'password': user['password'],
-#         'profile': user['profile']
-#     }
-#     return jsonify(response), 200

@@ -12,83 +12,43 @@
 .progress-bar {
     width: 30%;
     height: 40px;
-    background-color: #dedede;
+    background-color: #778DA9;
     font-weight: 600;
     font-size: .8rem;
 }
 
 /* 출판사별 progress bar 생성 */
-/* .progress-bar .progress-jtbc {
-    width: var(--width-fact-jtbc);
-    height: 40px;
-    padding: 0;
-    text-align: center;
-    background-color: #4F98FF;
-    color: #111;
-    animation: p-jtbc 2s;
-} */
 .progress-bar2-jtbc {
     width: 100%;
     height: 40px;
-    background: linear-gradient(to right, #4F98FF 0 var(--width-fact-jtbc), red var(--width-fact-jtbc) var(--width-conv-jtbc), #DEDEDE var(--width-conv-jtbc) 100%);
+    background: linear-gradient(to right, #1B263B 0 var(--width-fact-jtbc), #415A77 var(--width-fact-jtbc) var(--width-conv-jtbc), #778DA9 var(--width-conv-jtbc) 100%);
     font-weight: 600;
     font-size: .8rem;
     animation: p-jtbc 2s;
   }
   
-
-
-/* .progress-bar .progress-mbc {
-    width: var(--width-fact-mbc);
-    height: 40px;
-    padding: 0;
-    text-align: center;
-    background-color: #4F98FF;
-    color: #111;
-    animation: p-mbc 2s;
-} */
 .progress-bar2-mbc {
     width: 100%;
     height: 40px;
-    background: linear-gradient(to right, #4F98FF 0 var(--width-fact-mbc), red var(--width-fact-mbc) var(--width-conv-mbc), #DEDEDE var(--width-conv-mbc) 100%);
+    background: linear-gradient(to right, #1B263B 0 var(--width-fact-mbc), #415A77 var(--width-fact-mbc) var(--width-conv-mbc), #778DA9 var(--width-conv-mbc) 100%);
     font-weight: 600;
     font-size: .8rem;
     animation: p-mbc 2s;
   }
 
-
-/* .progress-bar .progress-sbs {
-    width: var(--width-fact-sbs);
-    height: 40px;
-    padding: 0;++
-    text-align: center;
-    background-color: #4F98FF;
-    color: #111;
-    animation: p-sbs 2s;
-} */
 .progress-bar2-sbs {
     width: 100%;
     height: 40px;
-    background: linear-gradient(to right, #4F98FF 0 var(--width-fact-sbs), red var(--width-fact-sbs) var(--width-conv-sbs), #DEDEDE var(--width-conv-sbs) 100%);
+    background: linear-gradient(to right, #1B263B 0 var(--width-fact-sbs), #415A77 var(--width-fact-sbs) var(--width-conv-sbs), #778DA9 var(--width-conv-sbs) 100%);
     font-weight: 600;
     font-size: .8rem;
     animation: p-sbs 2s;
   }
 
-
-/* .progress-bar .progress-kbs {
-    width: var(--width-fact-kbs);
-    height: 40px;
-    padding: 0;
-    text-align: center;
-    background-color: #4F98FF;
-    color: #111;
-    animation: p-kbs 2s;
-} */
 .progress-bar2-kbs {
     width: 100%;
     height: 40px;
-    background: linear-gradient(to right, #4F98FF 0 var(--width-fact-kbs), red var(--width-fact-kbs) var(--width-conv-kbs), #DEDEDE var(--width-conv-kbs) 100%);
+    background: linear-gradient(to right, #1B263B 0 var(--width-fact-kbs), #415A77 var(--width-fact-kbs) var(--width-conv-kbs), #778DA9 var(--width-conv-kbs) 100%);
     font-weight: 600;
     font-size: .8rem;
     animation: p-kbs 2s;
