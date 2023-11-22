@@ -44,4 +44,5 @@ def percentage():
         data_dict = {"publisher": each_data[0], "fact":each_data[2], "conv": each_data[3], "fake": each_data[4]}
         data_json = json.dumps(data_dict)
         datas.append(data_json)
+    datas.sort(key=lambda x:float(json.loads(x)["fact"][:-1]), reverse=True)
     return datas
