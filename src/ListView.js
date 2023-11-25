@@ -54,12 +54,9 @@ const NewsRow = (props) => {
     return (
         <div class="boundary">
             {/* percentage 막대 그래프로 나타내기 (1) */}
-            <div class="row">
-                <div class="text">{publisher}</div>
-                
-            </div>
+            <div class="text">{publisher}</div>
             <div class="progress-bar">    
-                <div class={class_name}></div>
+                <div class={class_name}/>
             </div>
         </div>
     );

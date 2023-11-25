@@ -1,4 +1,5 @@
 .boundary {
+  clear: both;
   width: 80%;
   border-style: outset;
   border-width: 2px;
@@ -8,13 +9,10 @@
   margin-bottom: 25px;
 }
 
-.row {
-  float: left;
-  margin-top: 60px;
-  margin-left: 100px;
-}
-
 .text{
+  float: left;
+  margin-top: 55px;
+  margin-left: 100px;
   font-family: "KimjungchulMyungjo";
   font-size:20px;
 }

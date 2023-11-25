@@ -1,0 +1,27 @@
+@mixin guide-box($color){
+    width: 30px;
+    height: 30px;
+    background-color: ($color);
+    float: left;
+    // margin-top: 20px;
+    // margin-bottom: 20px;
+}
+  
+.fact-box {
+    @include guide-box(#0D1B2A);
+    margin-left: 70px;
+}
+.conv-box {
+    @include guide-box(#415A77);
+}
+.false-box{
+    @include guide-box(#778DA9);
+}
+
+.row {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
