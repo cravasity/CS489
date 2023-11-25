@@ -3,10 +3,6 @@ import axios from 'axios';
 import './Listview.scss';
 
 const NewsRow = (props) => {
-    // const title = props.results.title;
-    // const date = props.results.date;
-    // const link = props.results.link;
-
     const publisher = props.percentages.publisher;
     const fact = props.percentages.fact;
     const conv = props.percentages.conv;
@@ -54,16 +50,14 @@ const NewsRow = (props) => {
         document.documentElement.style.setProperty('--conv-ytn', conv);
         class_name="ytn"
     } 
-    // else {
-    //     document.documentElement.style.setProperty('--width-fact-kbs', fact);
-    //     document.documentElement.style.setProperty('--width-conv-kbs', conv);
-    //     class_name="progress-bar2-kbs"
-    // }  
 
     return (
         <div class="boundary">
             {/* percentage 막대 그래프로 나타내기 (1) */}
-            <div class="row">{publisher}</div>
+            <div class="row">
+                <div class="text">{publisher}</div>
+                
+            </div>
             <div class="progress-bar">    
                 <div class={class_name}></div>
             </div>

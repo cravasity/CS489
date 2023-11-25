@@ -14,6 +14,11 @@
   margin-left: 100px;
 }
 
+.text{
+  font-family: "KimjungchulMyungjo";
+  font-size:20px;
+}
+
 .progress-bar {
     width: 60%;
     height: 40px;
@@ -78,3 +83,4 @@
 
 /* 애니메이션 생성 */
 @keyframes p{from{width:0px}to{width:100%}}
+

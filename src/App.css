@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+/* font */
+@font-face {
+  font-family: "KimjungchulMyungjo";
+  src: url("./fonts/KimjungchulMyungjo-Regular.ttf");
+}
