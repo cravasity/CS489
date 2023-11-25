@@ -1,12 +1,31 @@
+.boundary {
+  width: 80%;
+  border-style: outset;
+  border-width: 2px;
+  border-color: #E0E1DD;
+  border-radius: 5cap;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.row {
+  float: left;
+  margin-top: 60px;
+  margin-left: 100px;
+}
+
 .progress-bar {
-    width: 30%;
+    width: 60%;
     height: 40px;
     background-color: #778DA9;
     font-weight: 600;
     font-size: .8rem;
+    margin-left: 250px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-@mixin progress-bar($width-fact, $width-conv) {
+@mixin progress-bar-inner($width-fact, $width-conv) {
     width: 100%;
     height: 40px;
     background: linear-gradient(to right, #1B263B 0 var($width-fact), #415A77 var($width-fact) var($width-conv), #778DA9 var($width-conv) 100%);
@@ -17,44 +36,44 @@
 
 /* 출판사별 progress bar 생성 */
 .tv-chosun {
-    @include progress-bar(--fact-tv, --conv-tv);
+    @include progress-bar-inner(--fact-tv, --conv-tv);
     
   }
 
 .mbc {
-  @include progress-bar(--fact-mbc, --conv-mbc);
+  @include progress-bar-inner(--fact-mbc, --conv-mbc);
 }
   
 .edaily {
-  @include progress-bar(--fact-edaily, --conv-edaily);
+  @include progress-bar-inner(--fact-edaily, --conv-edaily);
 }
 
 .han {
-  @include progress-bar(--fact-han, --conv-han);
+  @include progress-bar-inner(--fact-han, --conv-han);
 }
 
 .sbs {
-  @include progress-bar(--fact-sbs, --conv-sbs);
+  @include progress-bar-inner(--fact-sbs, --conv-sbs);
 }
 
 .nocut-news {
-  @include progress-bar(--fact-nocut, --conv-nocut);
+  @include progress-bar-inner(--fact-nocut, --conv-nocut);
 }
 
 .money-today {
-  @include progress-bar(--fact-money, --conv-money);
+  @include progress-bar-inner(--fact-money, --conv-money);
 }
 
 .ohmy-news {
-  @include progress-bar(--fact-ohmy, --conv-ohmy);
+  @include progress-bar-inner(--fact-ohmy, --conv-ohmy);
 }
 
 .combine-news {
-  @include progress-bar(--fact-combine, --conv-combine);
+  @include progress-bar-inner(--fact-combine, --conv-combine);
 }
 
 .ytn {
-  @include progress-bar(--fact-ytn, --conv-ytn);
+  @include progress-bar-inner(--fact-ytn, --conv-ytn);
 }
 
 /* 애니메이션 생성 */
