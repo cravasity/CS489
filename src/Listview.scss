@@ -1,0 +1,61 @@
+.progress-bar {
+    width: 30%;
+    height: 40px;
+    background-color: #778DA9;
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+@mixin progress-bar($width-fact, $width-conv) {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to right, #1B263B 0 var($width-fact), #415A77 var($width-fact) var($width-conv), #778DA9 var($width-conv) 100%);
+    font-weight: 600;
+    font-size: .8rem;
+    animation: p 2s;
+}
+
+/* 출판사별 progress bar 생성 */
+.tv-chosun {
+    @include progress-bar(--fact-tv, --conv-tv);
+    
+  }
+
+.mbc {
+  @include progress-bar(--fact-mbc, --conv-mbc);
+}
+  
+.edaily {
+  @include progress-bar(--fact-edaily, --conv-edaily);
+}
+
+.han {
+  @include progress-bar(--fact-han, --conv-han);
+}
+
+.sbs {
+  @include progress-bar(--fact-sbs, --conv-sbs);
+}
+
+.nocut-news {
+  @include progress-bar(--fact-nocut, --conv-nocut);
+}
+
+.money-today {
+  @include progress-bar(--fact-money, --conv-money);
+}
+
+.ohmy-news {
+  @include progress-bar(--fact-ohmy, --conv-ohmy);
+}
+
+.combine-news {
+  @include progress-bar(--fact-combine, --conv-combine);
+}
+
+.ytn {
+  @include progress-bar(--fact-ytn, --conv-ytn);
+}
+
+/* 애니메이션 생성 */
+@keyframes p{from{width:0px}to{width:100%}}
