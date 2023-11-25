@@ -2,6 +2,22 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Requirements
+* `conda create --name flask python=3.8`
+* `source activate flask`
+* `pip install flask`
+* `FLASK_APP=./api/data.py FLASK_DEBUG=1 flask run`
+
+For M1 MAC
+* `yarn add sass -D`
+For Window
+* `npm install node-sass@4.14.1`
+
+Once you install flask and create conda environment, just put below commands,
+* `source activate flask`
+* `FLASK_APP=./api/data.py FLASK_DEBUG=1 flask run`
+* `npm start`
+
 ## Available Scripts
 
 In the project directory, you can run:
