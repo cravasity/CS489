@@ -38,45 +38,45 @@
 }
 
 /* 출판사별 progress bar 생성 */
-.tv-chosun {
-    @include progress-bar-inner(--fact-tv, --conv-tv);
+.TV조선 {
+    @include progress-bar-inner(--TV조선-fact, --TV조선-conv);
     
   }
 
-.mbc {
-  @include progress-bar-inner(--fact-mbc, --conv-mbc);
+.MBC {
+  @include progress-bar-inner(--MBC-fact, --MBC-conv);
 }
   
-.edaily {
-  @include progress-bar-inner(--fact-edaily, --conv-edaily);
+.이데일리 {
+  @include progress-bar-inner(--이데일리-fact, --이데일리-conv);
 }
 
-.han {
-  @include progress-bar-inner(--fact-han, --conv-han);
+.한겨레 {
+  @include progress-bar-inner(--한겨레-fact, --한겨레-conv);
 }
 
-.sbs {
-  @include progress-bar-inner(--fact-sbs, --conv-sbs);
+.SBS {
+  @include progress-bar-inner(--SBS-fact, --SBS-conv);
 }
 
-.nocut-news {
-  @include progress-bar-inner(--fact-nocut, --conv-nocut);
+.노컷뉴스 {
+  @include progress-bar-inner(--노컷뉴스-fact, --노컷뉴스-conv);
 }
 
-.money-today {
-  @include progress-bar-inner(--fact-money, --conv-money);
+.머니투데이 {
+  @include progress-bar-inner(--머니투데이-fact, --머니투데이-conv);
 }
 
-.ohmy-news {
-  @include progress-bar-inner(--fact-ohmy, --conv-ohmy);
+.오마이뉴스 {
+  @include progress-bar-inner(--오마이뉴스-fact, --오마이뉴스-conv);
 }
 
-.combine-news {
-  @include progress-bar-inner(--fact-combine, --conv-combine);
+.연합뉴스 {
+  @include progress-bar-inner(--연합뉴스-fact, --연합뉴스-conv);
 }
 
-.ytn {
-  @include progress-bar-inner(--fact-ytn, --conv-ytn);
+.YTN {
+  @include progress-bar-inner(--YTN-fact, --YTN-conv);
 }
 
 /* 애니메이션 생성 */
