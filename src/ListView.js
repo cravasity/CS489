@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Listview.scss';
 
+
 const NewsRow = (props) => {
     const publisher = props.percentages.publisher;
     const fact = props.percentages.fact;
@@ -26,18 +27,9 @@ const NewsRow = (props) => {
 };
 
 function ListView() {
-  const [datas, setDatas] = useState(null);
   const [percentages, setPercent] = useState(null);
 
   useEffect(() => {
-    // axios.get('/get-data')
-    // .then(({data}) => {
-    //     setDatas(data);
-    // })
-    // .catch(e => {
-    //     console.error(e.stack);
-    // });
-
     axios.get('/percentage')
     .then(({data}) => {
         setPercent(data);
