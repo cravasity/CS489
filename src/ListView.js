@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Listview.scss';
+import { useNavigate } from 'react-router-dom';
 
 
 const NewsRow = (props) => {
@@ -15,14 +16,22 @@ const NewsRow = (props) => {
     document.documentElement.style.setProperty(fact_var, fact);
     document.documentElement.style.setProperty(conv_var, conv);
 
+    const navigate = useNavigate();
+    const goDetail = e => {
+        navigate('/test', { state: { key:`${publisher}` } });
+    };
+
     return (
-        <div class="boundary">
-            {/* percentage 막대 그래프로 나타내기 (1) */}
-            <div class="text">{publisher}</div>
-            <div class="progress-bar">    
-                <div class={publisher}/>
+        <div className="NewsRow">
+            <div class="boundary">
+                {/* percentage 막대 그래프로 나타내기 (1) */}
+                <div class="text" onClick={goDetail}>{publisher}</div>
+                <div class="progress-bar">    
+                    <div class={publisher}/>
+                </div>
             </div>
         </div>
+        
     );
 };
 

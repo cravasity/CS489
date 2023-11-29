@@ -31,7 +31,7 @@ function Rank() {
       <Box name="fact-box"/>
       <Box name="conv-box"/>
       <Box name="false-box"/>
-      <ListView />
+      <ListView/>
     </div>
   );
 }

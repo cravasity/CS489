@@ -1,8 +1,8 @@
-import logo from './logo.svg';
 import React from "react";
 import './App.css';
-import ListView from './ListView';
 import Rank from './Rank'
+import Testing from './Testing'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 // function App() {
 //   return (-
@@ -25,10 +25,16 @@ import Rank from './Rank'
 //   );
 // }
 
+// jsx file에서 image load하기
 function App() {
   return (
     <div className="App">
-      <Rank/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Rank/>}></Route>
+          <Route path="/test" element={<Testing/>}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
