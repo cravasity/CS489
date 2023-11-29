@@ -18,7 +18,7 @@ const NewsRow = (props) => {
 
     const navigate = useNavigate();
     const goDetail = e => {
-        navigate('/test', { state: { key:`${publisher}` } });
+        navigate('/test', { state: { publisher:`${publisher}` } });
     };
 
     return (
