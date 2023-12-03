@@ -1,6 +1,7 @@
 .boundary {
   clear: both;
   width: 80%;
+  height:150px;
   border-style: outset;
   border-width: 2px;
   border-color: #E0E1DD;
@@ -10,6 +11,7 @@
 }
 
 .text{
+  width: 120px;
   float: left;
   margin-top: 55px;
   margin-left: 100px;
@@ -17,24 +19,22 @@
   font-size:20px;
 }
 
-.progress-bar {
+@mixin progress-bar-inner($width-fact, $width-conv) {
     width: 60%;
     height: 40px;
-    background-color: #778DA9;
-    font-weight: 600;
-    font-size: .8rem;
-    margin-left: 250px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-}
-
-@mixin progress-bar-inner($width-fact, $width-conv) {
-    width: 100%;
-    height: 40px;
+    float:left;
+    margin-top:50px;
     background: linear-gradient(to right, #1B263B 0 var($width-fact), #415A77 var($width-fact) var($width-conv), #778DA9 var($width-conv) 100%);
     font-weight: 600;
     font-size: .8rem;
     animation: p 2s;
+}
+
+@mixin icon_format($publisher) {
+  height : 100px;
+  background-image : url('./icon/'+$publisher+'.png');
+  background-size : cover;
+  background-position : center;
 }
 
 /* 출판사별 progress bar 생성 */
@@ -79,6 +79,48 @@
   @include progress-bar-inner(--YTN-fact, --YTN-conv);
 }
 
+/* 출판사별 아이콘 */
+.TV조선_icon {
+  @include icon_format("TV조선");
+}
+
+.MBC_icon {
+  @include icon_format("MBC");
+}
+
+.이데일리_icon {
+  @include icon_format("이데일리");
+}
+
+.한겨레_icon {
+  @include icon_format("한겨레");
+}
+
+.SBS_icon {
+  @include icon_format("SBS");
+}
+
+.노컷뉴스_icon {
+  @include icon_format("노컷뉴스");
+}
+
+.머니투데이_icon {
+  @include icon_format("머니투데이");
+}
+
+.오마이뉴스_icon {
+  @include icon_format("오마이뉴스");
+}
+
+.연합뉴스_icon {
+  @include icon_format("연합뉴스");
+}
+
+.YTN_icon {
+  @include icon_format("YTN");
+}
+
+
 /* 애니메이션 생성 */
-@keyframes p{from{width:0px}to{width:100%}}
+@keyframes p{from{width:0px}to{width:60%}}
 

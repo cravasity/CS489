@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Listview.scss';
 import { useNavigate } from 'react-router-dom';
-
+import {Image} from 'react-native';
 
 const NewsRow = (props) => {
     const publisher = props.percentages.publisher;
@@ -12,6 +12,7 @@ const NewsRow = (props) => {
     
     const fact_var = `--${publisher}-fact`;
     const conv_var = `--${publisher}-conv`;
+    const img_path = `./icon${publisher}.png`;
 
     document.documentElement.style.setProperty(fact_var, fact);
     document.documentElement.style.setProperty(conv_var, conv);
@@ -26,9 +27,9 @@ const NewsRow = (props) => {
             <div class="boundary">
                 {/* percentage 막대 그래프로 나타내기 (1) */}
                 <div class="text" onClick={goDetail}>{publisher}</div>
-                <div class="progress-bar">    
-                    <div class={publisher}/>
-                </div>
+                <Image source={require(`./icon/${publisher}.png`)} style={{marginTop: 20, marginLeft: 20, marginRight:20, width: 150, height: 100, float:"left"}} resizeMode="contain"/> 
+                <div class={publisher}/>
+                
             </div>
         </div>
         
