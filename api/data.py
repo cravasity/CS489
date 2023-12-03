@@ -20,14 +20,15 @@ def get():
         date=line[:10]
         data=line[11:]
         data=data.split(",")
-        publisher = data[-2]
+        publisher = data[-3]
         if publisher != input_pub:
             continue
         result = data[-1]
-        title_list = data[:-2]
+        url = data[-2]
+        title_list = data[:-3]
         title = ''.join(title_list)
                 
-        data_dict = {"date":date, "title":title, "result": result}
+        data_dict = {"date":date, "title":title, "result": result, "url": url}
         data_json = json.dumps(data_dict)
         datas.append(data_json)
     datas.sort(key=lambda x:(json.loads(x)["date"]), reverse=True)
