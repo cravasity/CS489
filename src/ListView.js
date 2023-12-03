@@ -19,7 +19,7 @@ const NewsRow = (props) => {
 
     const navigate = useNavigate();
     const goDetail = e => {
-        navigate('/test', { state: { publisher:`${publisher}` } });
+        navigate('/publish', { state: { publisher:`${publisher}` } });
     };
 
     return (
@@ -27,7 +27,7 @@ const NewsRow = (props) => {
             <div class="boundary">
                 {/* percentage 막대 그래프로 나타내기 (1) */}
                 <div class="text" onClick={goDetail}>{publisher}</div>
-                <Image source={require(`./icon/${publisher}.png`)} style={{marginTop: 20, marginLeft: 20, marginRight:20, width: 150, height: 100, float:"left"}} resizeMode="contain"/> 
+                <Image source={require(`./icon/${publisher}.png`)} style={{marginTop: 20, width: "10%", height: 100, float:"left"}} resizeMode="contain"/> 
                 <div class={publisher}/>
                 
             </div>

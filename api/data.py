@@ -6,9 +6,10 @@ import csv, json, math
 app = Flask(__name__)
 
 # data에 저장되어 있는 output csv 파일에서 data들을 가져오는 역할을 한다.
-@app.route("/get-data", methods=['GET'])
+@app.route("/get", methods=['GET'])
 def get():
     # data = pd.read_csv("/Users/juhyun/cs489/factect/data/정치_20231116_05시22분22초.csv", dtype={"date":str, "title":str, "link":str}) # (730, 4) shape의 data가 reading 된다.
+    input_pub = request.args.get('input_pub')
     reader = open("data/total_result.csv")
     start = True
     datas=[]
@@ -19,12 +20,14 @@ def get():
         date=line[:10]
         data=line[11:]
         data=data.split(",")
-        result = data[-1]
         publisher = data[-2]
+        if publisher != input_pub:
+            continue
+        result = data[-1]
         title_list = data[:-2]
         title = ''.join(title_list)
                 
-        data_dict = {"date":date, "title":title, "publisher":publisher}
+        data_dict = {"date":date, "title":title, "publisher":publisher, "result": result}
         data_json = json.dumps(data_dict)
         datas.append(data_json)
     return datas
