@@ -9,6 +9,7 @@ const NewsRow = (props) => {
     const fact = props.percentages.fact;
     const conv = props.percentages.conv;
     const fake = props.percentages.fake;
+    const data_num = props.percentages.data_num;
     
     const fact_var = `--${publisher}-fact`;
     const conv_var = `--${publisher}-conv`;
@@ -29,7 +30,7 @@ const NewsRow = (props) => {
                 <div class="text" onClick={goDetail}>{publisher}</div>
                 <Image source={require(`./icon/${publisher}.png`)} style={{marginTop: 20, width: "10%", height: 100, float:"left"}} resizeMode="contain"/> 
                 <div class={publisher}/>
-                
+                <div class="text3">전체 기사: {data_num}</div>
             </div>
         </div>
         

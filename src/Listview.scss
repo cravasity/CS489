@@ -8,6 +8,8 @@
   border-radius: 5cap;
   align-items: center;
   margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .text{
@@ -15,6 +17,15 @@
   float: left;
   margin-top: 55px;
   margin-left: 5%;
+  font-family: "KimjungchulMyungjo";
+  font-size:20px;
+}
+
+.text3{
+  width: 8%;
+  float: right;
+  margin-top: 55px;
+  margin-right: 5%;
   font-family: "KimjungchulMyungjo";
   font-size:20px;
 }
@@ -78,48 +89,6 @@
 .YTN {
   @include progress-bar-inner(--YTN-fact, --YTN-conv);
 }
-
-/* 출판사별 아이콘 */
-.TV조선_icon {
-  @include icon_format("TV조선");
-}
-
-.MBC_icon {
-  @include icon_format("MBC");
-}
-
-.이데일리_icon {
-  @include icon_format("이데일리");
-}
-
-.한겨레_icon {
-  @include icon_format("한겨레");
-}
-
-.SBS_icon {
-  @include icon_format("SBS");
-}
-
-.노컷뉴스_icon {
-  @include icon_format("노컷뉴스");
-}
-
-.머니투데이_icon {
-  @include icon_format("머니투데이");
-}
-
-.오마이뉴스_icon {
-  @include icon_format("오마이뉴스");
-}
-
-.연합뉴스_icon {
-  @include icon_format("연합뉴스");
-}
-
-.YTN_icon {
-  @include icon_format("YTN");
-}
-
 
 /* 애니메이션 생성 */
 @keyframes p{from{width:0px}to{width:60%}}

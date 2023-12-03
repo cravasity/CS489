@@ -1,0 +1,62 @@
+.chart{
+  border-style: outset;
+  border-width: 2px;
+  border-color: #E0E1DD;
+  border-radius: 5cap;
+  align-items: center;
+  margin-bottom: 25px;
+  display: flex;
+  width: 20%;
+}
+
+
+.text2{
+  width: 10%;
+  float: left;
+  margin-top: 150px;
+  margin-left: 100px;
+  font-family: "KimjungchulMyungjo";
+  // display: inline;
+  font-size:20px;
+}
+
+.header{
+  float:left;
+  margin-top: 35px;
+  font-size:50px;
+}
+
+.null {
+  clear:both;
+  font-family: "KimjungchulMyungjo";
+  font-size:20px;
+}
+
+.wrap{
+ > table{
+  border-spacing: 0;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  font-family: "KimjungchulMyungjo";
+  > thead{
+    > tr{
+      > th{
+        font-size:30px;
+        line-height:4rem;
+        border-bottom:1px solid #0D1B2A;
+      }
+    }
+   }
+   > tbody{
+    > tr{
+      > td{
+        line-height:3rem;
+        text-align: center;
+        border-top:1px solid #0D1B2A;
+      }
+    }
+   }
+ } 
+}
