@@ -30,6 +30,7 @@ def get():
         data_dict = {"date":date, "title":title, "result": result}
         data_json = json.dumps(data_dict)
         datas.append(data_json)
+    datas.sort(key=lambda x:(json.loads(x)["date"]), reverse=True)
     return datas
 
 # 모든 publisher의 fact, conv, false의 percentage 정보를 return한다.
