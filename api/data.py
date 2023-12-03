@@ -16,16 +16,15 @@ def get():
         if start: 
             start = not start
             continue
-        
-        date=line[:19]
-        data=line[20:]
-        data=data.split("https")
-        if len(data)<2:
-            continue
-        title=data[0][:-1]
-        link=("https"+data[1])[:-2]
-        
-        data_dict = {"date":date, "title":title, "link":link}
+        date=line[:10]
+        data=line[11:]
+        data=data.split(",")
+        result = data[-1]
+        publisher = data[-2]
+        title_list = data[:-2]
+        title = ''.join(title_list)
+                
+        data_dict = {"date":date, "title":title, "publisher":publisher}
         data_json = json.dumps(data_dict)
         datas.append(data_json)
     return datas
