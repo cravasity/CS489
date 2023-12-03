@@ -4,6 +4,7 @@ import {Chart as ChartJS, ArcElement, Tooltip, Legend} from "chart.js";
 import {Doughnut} from "react-chartjs-2";
 import axios from 'axios';
 import { useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import {styled} from "styled-components";
 import {Image} from 'react-native';
 
@@ -94,7 +95,7 @@ const TableComp = (props) => {
               return (
                 <tr class="tr">
                   <td>{json_r.date}</td>
-                  <td>{json_r.title}</td>
+                  <td><Link to={json_r.url}>{json_r.title}</Link></td>
                   <td>{json_r.result}</td>
                 </tr>
               )
