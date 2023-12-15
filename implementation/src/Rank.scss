@@ -1,0 +1,31 @@
+@mixin guide-box($color){
+    width: 30px;
+    height: 30px;
+    background-color: ($color);
+    float: left;
+}
+
+@mixin font-kim {
+    font-family: "KimjungchulMyungjo";
+}
+  
+.fact-box {
+    @include guide-box(#0D1B2A);
+    margin-left: 70px;
+}
+.conv-box {
+    @include guide-box(#415A77);
+}
+.false-box{
+    @include guide-box(#778DA9);
+}
+
+.row {
+    float: left;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    font-size:15px;
+    @include font-kim;
+}

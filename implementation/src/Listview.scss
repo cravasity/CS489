@@ -1,0 +1,95 @@
+.boundary {
+  clear: both;
+  width: 90%;
+  height:150px;
+  border-style: outset;
+  border-width: 2px;
+  border-color: #E0E1DD;
+  border-radius: 5cap;
+  align-items: center;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text{
+  width: 8%;
+  float: left;
+  margin-top: 55px;
+  margin-left: 5%;
+  font-family: "KimjungchulMyungjo";
+  font-size:20px;
+}
+
+.text3{
+  width: 8%;
+  float: right;
+  margin-top: 55px;
+  margin-right: 5%;
+  font-family: "KimjungchulMyungjo";
+  font-size:20px;
+}
+
+@mixin progress-bar-inner($width-fact, $width-conv) {
+    width: 60%;
+    height: 40px;
+    float:left;
+    margin-top:50px;
+    background: linear-gradient(to right, #1B263B 0 var($width-fact), #415A77 var($width-fact) var($width-conv), #778DA9 var($width-conv) 100%);
+    font-weight: 600;
+    font-size: .8rem;
+    animation: p 2s;
+}
+
+@mixin icon_format($publisher) {
+  height : 100px;
+  background-image : url('./icon/'+$publisher+'.png');
+  background-size : cover;
+  background-position : center;
+}
+
+/* 출판사별 progress bar 생성 */
+.TV조선 {
+    @include progress-bar-inner(--TV조선-fact, --TV조선-conv);
+    
+  }
+
+.MBC {
+  @include progress-bar-inner(--MBC-fact, --MBC-conv);
+}
+  
+.이데일리 {
+  @include progress-bar-inner(--이데일리-fact, --이데일리-conv);
+}
+
+.한겨레 {
+  @include progress-bar-inner(--한겨레-fact, --한겨레-conv);
+}
+
+.SBS {
+  @include progress-bar-inner(--SBS-fact, --SBS-conv);
+}
+
+.노컷뉴스 {
+  @include progress-bar-inner(--노컷뉴스-fact, --노컷뉴스-conv);
+}
+
+.머니투데이 {
+  @include progress-bar-inner(--머니투데이-fact, --머니투데이-conv);
+}
+
+.오마이뉴스 {
+  @include progress-bar-inner(--오마이뉴스-fact, --오마이뉴스-conv);
+}
+
+.연합뉴스 {
+  @include progress-bar-inner(--연합뉴스-fact, --연합뉴스-conv);
+}
+
+.YTN {
+  @include progress-bar-inner(--YTN-fact, --YTN-conv);
+}
+
+/* 애니메이션 생성 */
+@keyframes p{from{width:0px}to{width:60%}}
+
